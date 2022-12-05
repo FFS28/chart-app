@@ -13,12 +13,13 @@ const Charbar = ({ real_value, height, year, latest = false }) => {
                 <svg width="61" height={value} viewBox={"0 0 61 " + value} fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="61" height={value} fill="url(#paint0_radial_415_5632)" />
                     <rect x="0.5" y="0.5" width="60" height={value} stroke="#EAEAEA" strokeOpacity="0.5" />
-                    <rect x="59.439" y={value} width="30.439" height={value * 0.1} transform={`rotate(-180 59.439 ${value})`} fill="#F3F3F3" fill-opacity="0.3"/>
-                    <rect x="59.439" y={value * 0.8} width="30.439" height={value * 0.05} transform={`rotate(-180 59.439 ${value * 0.8})`} fill="#F3F3F3" fill-opacity="0.3"/>
-                    <rect x="59.439" y={value * 0.6} width="30.439" height={value * 0.05} transform={`rotate(-180 59.439 ${value * 0.6})`} fill="#F3F3F3" fill-opacity="0.3"/>
-                    <rect x="59.439" y={value * 0.4} width="30.439" height={value * 0.012} transform={`rotate(-180 59.439 ${value * 0.4})`} fill="#F3F3F3" fill-opacity="0.3"/>
-                    <rect x="59.439" y={value * 0.2} width="30.439" height={value * 0.15} transform={`rotate(-180 59.439 ${value * 0.2})`} fill="#F3F3F3" fill-opacity="0.3"/>
-                    <rect x="59.439" y={value * 0} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value * 0})`} fill="#F3F3F3" fill-opacity="0.3"/>
+                    <rect x="59.439" y={value} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value})`} fill="#F3F3F3" fill-opacity="0.2"/>
+                    <rect x="59.439" y={value * 0.7} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value * 0.8})`} fill="#F3F3F3" fill-opacity="0.2"/>
+                    <rect x="59.439" y={value * 0.4} width="30.439" height={value * 0.3} transform={`rotate(-180 59.439 ${value * 0.6})`} fill="#F3F3F3" fill-opacity="0.2"/>
+                    <rect x="59.439" y={value * 0.6} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value * 0.6})`} fill="#F3F3F3" fill-opacity="0.2"/>
+                    <rect x="59.439" y={value * 0.4} width="30.439" height={value * 0.12} transform={`rotate(-180 59.439 ${value * 0.4})`} fill="#F3F3F3" fill-opacity="0.3"/>
+                    <rect x="59.439" y={value * 0.1} width="30.439" height={value * 0.3} transform={`rotate(-180 59.439 ${value * 0.2})`} fill="#F3F3F3" fill-opacity="0.3"/>
+                    <rect x="59.439" y={value * 0.1} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value * 0})`} fill="#F3F3F3" fill-opacity="0.3"/>
                     <defs>
                         <radialGradient id="paint0_radial_415_5632" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(29.9993 -202) rotate(90) scale(275.37 13338.2)">
                             <stop stopColor="#4A36B3" />
