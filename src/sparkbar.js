@@ -6,7 +6,7 @@ const Charbar = ({ real_value, height, year, latest = false }) => {
     
     return (
         <div className={`absolute mb-[${height}px] sm:right-0 sm:bottom-0 right-0 bottom-0`}>
-            <div className={`relative w-fit sm:rotate-0 sm:mb-0 -mb-[${height}px] rotate-90 origin-bottom-right`}>
+            <div className={`relative w-fit sm:rotate-0 sm:mb-0 rotate-90 origin-bottom-right`}>
                 <p className='w-full text-center'>
                     <text x="20" y="15" fill="">{real_value}</text>
                 </p>
@@ -114,15 +114,20 @@ function GoogleChart(props) {
                             <td className='w-[10px]'></td>
                         </tr>
                         <tr>
+                            <td className='h-[60px] relative'>
+                            </td>
+                            <td className={`w-[${spacing}px] border-l border-dashed`} rowSpan={5}></td>
+                            <td className={`border-l border-dashed`} rowSpan={5}></td>
+                            <td className={`border-l border-dashed`} rowSpan={5}></td>
+                            <td className={`border-l border-dashed`} rowSpan={5}></td>
+                            <td className={`border-l border-dashed`} rowSpan={5}></td>
+                            <td className={`border-l border-dashed`} rowSpan={5}></td>
+                            <td className=''></td>
+                        </tr>
+                        <tr>
                             <td className='h-[122px] relative'>
                                 <Charbar real_value={"668m"} height={spacing} year={2019} />
                             </td>
-                            <td className={`w-[${spacing}px] border-l`} rowSpan={5}></td>
-                            <td className={`border-l`} rowSpan={5}></td>
-                            <td className={`border-l`} rowSpan={5}></td>
-                            <td className={`border-l`} rowSpan={5}></td>
-                            <td className={`border-l`} rowSpan={5}></td>
-                            <td className={`border-l`} rowSpan={5}></td>
                             <td className=''></td>
                         </tr>
                         <tr>
