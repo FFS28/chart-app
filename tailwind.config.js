@@ -4,7 +4,12 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'gradient-radial':
+          'radial-gradient(100% 100% at 100% 0%, var(--tw-gradient-stops))',
+      },
+    },
   },
   plugins: [],
 }

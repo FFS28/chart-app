@@ -5,13 +5,15 @@ const Charbar = ({ real_value, height, year, latest = false }) => {
     const value = parseFloat(real_value) * (real_value.match(/[B]/g) ? 1000 : 1) / 1000 * height * 2;
     
     return (
-        <div className={`absolute sm:mb-[${height}px] sm:right-0 sm:bottom-0 right-0 bottom-0`}>
-            <div className='relative w-fit sm:rotate-0 rotate-90 origin-bottom-right'>
-                <svg className='sm:rotate-0 -rotate-90' height="30" width="61" >
+        <div className={`absolute mb-[${height}px] sm:right-0 sm:bottom-0 right-0 bottom-0`}>
+            <div className={`relative w-fit sm:rotate-0 sm:mb-0 -mb-[${height}px] rotate-90 origin-bottom-right`}>
+                <p className='w-full text-center'>
                     <text x="20" y="15" fill="">{real_value}</text>
-                </svg>
-                <svg width="61" height={value} viewBox={"0 0 61 " + value} fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="61" height={value} fill="url(#paint0_radial_415_5632)" />
+                </p>
+                <svg className='bg-gradient-to-r from-[#4B4B9D] to-[#BD529C]' 
+                    fill='none'
+                    width="61" height={value} viewBox={"0 0 61 " + value}   xmlns="http://www.w3.org/2000/svg">
+                    <rect width="61" height={value}  />
                     <rect x="0.5" y="0.5" width="60" height={value} stroke="#EAEAEA" strokeOpacity="0.5" />
                     <rect x="59.439" y={value} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value})`} fill="#F3F3F3" fill-opacity="0.2"/>
                     <rect x="59.439" y={value * 0.7} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value * 0.8})`} fill="#F3F3F3" fill-opacity="0.2"/>
@@ -21,7 +23,11 @@ const Charbar = ({ real_value, height, year, latest = false }) => {
                     <rect x="59.439" y={value * 0.1} width="30.439" height={value * 0.3} transform={`rotate(-180 59.439 ${value * 0.2})`} fill="#F3F3F3" fill-opacity="0.3"/>
                     <rect x="59.439" y={value * 0.1} width="30.439" height={value * 0.2} transform={`rotate(-180 59.439 ${value * 0})`} fill="#F3F3F3" fill-opacity="0.3"/>
                     <defs>
-                        <radialGradient id="paint0_radial_415_5632" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(29.9993 -202) rotate(90) scale(275.37 13338.2)">
+                        <radialGradient id="color1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(29.9993 -202) rotate(90) scale(275.37 13338.2)">
+                            <stop stopColor="#4A36B3" />
+                            <stop offset="0.978871" stopColor="#BB58A0" />
+                        </radialGradient>
+                        <radialGradient id="color2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(29.9993 -202) rotate(90) scale(275.37 13338.2)">
                             <stop stopColor="#4A36B3" />
                             <stop offset="0.978871" stopColor="#BB58A0" />
                         </radialGradient>
@@ -53,34 +59,34 @@ function GoogleChart(props) {
                 <table className='w-[600px]'>
                     <tbody>
                         <tr>
-                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-4'>$2.5B</p></td>
-                            <td className={`w-full border-b h-[${spacing}px]`} colSpan={5}></td>
-                            <td className={`w-full min-w-[50px] border-b`}></td>
+                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-3'>$2.5B</p></td>
+                            <td className={`w-full h-[${spacing}px]`} colSpan={5}></td>
+                            <td className={`w-full min-w-[50px] border-dashed border-b`}></td>
                         </tr>
                         <tr>
-                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-4'>$2B</p></td>
-                            <td className={`w-full border-t border-b h-[${spacing}px]`} colSpan={5}></td>
-                            <td className={`w-full min-w-[50px] border-b`}></td>
+                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-3'>$2B</p></td>
+                            <td className={`w-full border-t border-dashed border-b h-[${spacing}px]`} colSpan={5}></td>
+                            <td className={`w-full min-w-[50px] border-dashed border-b`}></td>
                         </tr>
                         <tr>
-                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-4'>$1.5B</p></td>
-                            <td className={`w-full border-t border-b h-[${spacing}px]`} colSpan={5}></td>
-                            <td className={`w-full min-w-[50px] border-b`}></td>
+                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-3'>$1.5B</p></td>
+                            <td className={`w-full border-t border-dashed border-b h-[${spacing}px]`} colSpan={5}></td>
+                            <td className={`w-full min-w-[50px] border-dashed border-b`}></td>
                         </tr>
                         <tr>
-                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-4'>$1B</p></td>
-                            <td className={`w-full border-t border-b h-[${spacing}px]`} colSpan={5}></td>
-                            <td className={`w-full min-w-[50px] border-b`}></td>
+                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-3'>$1B</p></td>
+                            <td className={`w-full border-t border-dashed border-b h-[${spacing}px]`} colSpan={5}></td>
+                            <td className={`w-full min-w-[50px] border-dashed border-b`}></td>
                         </tr>
                         <tr>
-                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-4'>$0.5B</p></td>
-                            <td className={`w-full border-t border-b h-[${spacing}px]`} colSpan={5}></td>
-                            <td className={`w-full min-w-[50px] border-b`}></td>
+                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-3'>$0.5B</p></td>
+                            <td className={`w-full border-t border-dashed border-b h-[${spacing}px]`} colSpan={5}></td>
+                            <td className={`w-full min-w-[50px] border-dashed border-b`}></td>
                         </tr>
                         <tr>
-                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-4'>$0</p></td>
-                            <td className={`w-full border-t border-b h-[${spacing}px]`} colSpan={5}></td>
-                            <td className={`w-full min-w-[50px] border-b`}></td>
+                            <td className='relative w-[150px] align-bottom'><p className='absolute w-full text-right pr-4 -mt-3'>$0</p></td>
+                            <td className={`w-full border-t border-dashed border-b h-[${spacing}px]`} colSpan={5}></td>
+                            <td className={`w-full min-w-[50px] border-dashed border-b`}></td>
                         </tr>
                         <tr>
                             <td className='relative px-8'></td>
